@@ -16,18 +16,18 @@
     border-radius: 10px;
     padding: 0 30px;
     min-width: 500px;
-    /* overflow-y: auto; */
     margin-bottom: 10px;
     box-sizing: border-box;
 }
 
-.header{
+.header {
     color: white;
     text-align: center;
     margin: 30px 0;
-    
+
 }
-.task-input{
+
+.task-input {
     color: #ccc;
     width: 280px;
     padding: 15px;
@@ -38,42 +38,142 @@
     border: 1px solid #c89666;
     border-radius: 10px;
 }
-.button-add{
+
+.button-add {
     width: 130px !important;
     padding: 10px 15px !important;
-    margin-top: -10px !important;
+    /* margin-top: -10px !important; */
     font-size: 20px !important;
     color: black !important;
     background-color: #f1af71 !important;
 }
 
-.list-item{
+.list-item {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    /* height: 40px; */
     width: 435px;
-    /* background-color: #12343b; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.list-item h5{
-    padding: 10px 0 5px 10px; 
+
+.list-item h5 {
+    padding: 10px 0 5px 10px;
     font-size: 20px;
     color: white;
     text-align: left;
     max-width: 350px;
     word-wrap: break-word;
 }
-.delete-btn{
+
+.delete-btn {
     color: red !important;
 }
-.edit-btn{
+
+.edit-btn {
     color: rgb(55, 236, 55) !important;
 }
-.todoError{
+
+.todoError {
     color: red;
-    text-align: left;
-    margin-top: -20px;
+    top: -20px;
+    left: -294px;
+    position: absolute;
+}
+
+.error {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper {
+    display: inline-block;
+}
+
+@media only screen and (max-width : 425px) {
+    .main {
+        min-width: 100%;
+        padding: 0;
+    }
+
+    .task-input {
+        margin-right: auto;
+        margin-left: auto;
+        width: 360px;
+        height: 50px;
+    }
+
+    .list-item {
+        margin-left: 2rem;
+        width: 84%;
+    }
+
+    .button-add {
+        width: 120px !important;
+        padding: 5px 10px !important;
+        font-size: 18px !important;
+    }
+
+    .list-item h5 {
+        max-width: 77%;
+    }
+
+    .todoError {
+        top: -48px;
+        left: -103px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper div:first-child {
+        order: 1;
+    }
+    .button-add{
+        margin-top: -20px !important;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+    .list-item h5 {
+        max-width: 71% !important;
+    }
+
+    .task-input {
+        width: 290px !important;
+    }
+
+    .list-item {
+        margin-left: 1rem;
+        width: 89%;
+    }
+    .todoError {
+        left: -67px !important;
+    }
+    
+}
+
+@media only screen and (max-width : 375px) {
+    .list-item h5 {
+        max-width: 74%;
+    }
+
+    .task-input {
+        width: 317px;
+    }
+    .todoError {
+        left: -81px;
+    }
 }
